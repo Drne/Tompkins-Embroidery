@@ -12,4 +12,4 @@ script:
   - npm test
 
 after_success:
-  - firebase deploy --token 1/2WAd8tTI_Bds70t5RtfdQOkCF246YFz6sTZLuVlJO87wXZ9c5BT8ewFyK1hrMWl7
+  - test $TRAVIS_BRANCH = "master" && firebase deploy --token $FIREBASE_TOKEN
